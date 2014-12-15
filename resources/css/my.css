@@ -1,0 +1,23 @@
+.jumbo-bg {
+    background-image: url("../images/jumbo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 550px;
+}
+
+.jumbo-content {
+    padding-top: 50px;
+    padding-left: 100px;
+    color: white;
+}
+
+.form-title {
+    color: white;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.form-content {
+    color: white;
+}

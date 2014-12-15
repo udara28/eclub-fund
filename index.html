@@ -2,6 +2,7 @@
 <head>
 <title>E club fund</title>
 <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" >
+<link rel="stylesheet" href="resources/css/my.css" type="text/css" >
 </head>
 
  <body>
@@ -9,16 +10,195 @@
     <h1>CLUB FUND</h1>    
 </div>
 
-<div class="col-md-6">
+<div class="col-md-7">
     <button class="btn pull-right">Sign Up</button>
     <p class="spacer pull-right"> . </p>
-    <button class="btn btn-info pull-right">Sign In</button>
+    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#signInForm">Sign In</button>
 </div>
+
+<!-- navigation tabs -->
+<div role="tabpanel">
    <br><br>
-   
-   <ul class="nav nav-tabs">
-     <li role="presentation" class="active"><a href="#">Home</a></li>
-     <li role="presentation"><a href="#">Profile</a></li>
-     <li role="presentation"><a href="#">Messages</a></li>
-   </ul>
+   <ul class="nav nav-tabs" role="tablist" id="navTab">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">About</a></li>
+    <li role="presentation"><a href="#procedure" aria-controls="procedure" role="tab" data-toggle="tab">Procedure</a></li>
+    <li role="presentation"><a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane fade in active" id="home">
+  <!-- home tab -->  
+      <div class="jumbotron jumbo-bg">
+          <div class="container jumbo-content">
+            <h1>Light a candle!</h1>
+            <h5>
+              "E-Club fund" is a scholarship scheme initiated by the Electronic Club<br>
+              of the Department of Electronic and Telecommunication Engineering of University Moratuwa<br>
+              with the intention of providing financial aids exclusively for the department undergraduates who are in need.
+            </h5>
+            <p><button class="btn btn-primary btn-lg" onClick="gotoAbout()">Learn more</button></p>
+          </div>
+      </div>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="about">
+  <!-- About tab -->
+      <br><br>
+      <ul>
+          <li class="well">
+            E-Cllub fund is a scholarship scheme initiated by the Electronic Club of the Department of Electronic and Telecommunication Engineering of University Moratuwa with the intention of providing financial aids exclusively for the department undergraduates who are in need.
+          </li>
+          <li class="well">
+            The benefactors of the funds would be the ENTC Alumni who have eagerly joined hands with the E-Club for this noble cause.
+Through this initiation, the E-Club expects that the financial barriers will not limit the odyssey beyond excellence of our undergraduates.
+          </li>
+          <li class="well">
+            E-club fund will help the brilliant minds of the department to perform better in their academic career while engaging in extra-curricular activities. 
+This brings out another perspective for the brotherhood of the ENTC family by enhancing the relationship between the ENTC Alumni and the present undergraduates. We at E-Club, believe that the future generations will understand the duty towards their alma-mater through this project.
+          </li>
+          <li class="well">
+            <strong>
+              The E-Club warmly welcome all the generous hearts of ENTC Alumni to join with <Fund Name>
+Please fill the form below if you’d like to become a benefactor.
+The E-Club will get you in contact with a student after the selection process.
+            </strong>
+          </li>
+      </ul>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="procedure">
+  <!-- Procedure tab -->
+      <br>
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Eligibility Criteria
+              </a>
+            </h4>
+          </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            All the undergraduates who are seeking for financial aids at the Department of Electronic and Telecommunication Engineering are eligible to apply for this scholarship scheme. However the suitable students will be selected by the selection committee.
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+          <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Selection Criteria
+            </a>
+          </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            <ul>
+              <li>
+                Please fill the application through Sign Up
+              </li>
+              <li>
+                The applications will be reviewed by the selection committee which consists of the Head of the Department of ENTC, Patron of the E-Club, Senior Treasurer of the E-Club and representatives from E-Club
+              </li>
+              <li>
+                Please note that the decisions by the committee are final and will not be subjected to change due to any reason
+              </li>
+              <li>
+                E-Club will act as the intermediary between the benefactor and the student to introduce the two parties
+              </li>
+              <li>
+                Money will be directly deposited to student's account by the benefactor. E-Club will not have any involvement in this process. However E-Club will regularly review whether the student receives the scholarship money as agreed
+              </li>
+              <li>
+                Meeting with the benefactors and the students will be held once a year with the participation of the selection committee
+              </li>
+            </ul>
+          </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Donation
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        The benefactor agrees to pay the amount of Rs. 3000/= per each month for a period of one year. After that, he/she can continue with the payment or discontinue.
+The scholarship amounts will be directly deposited to the students account. Monthly reviews will be conducted check whether the process is conducted smoothly.
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="contact">
+  <!--contact us tab -->
+      <br>
+        <div class="panel panel-default col-sm-offset-2 col-md-8">
+          <div class="panel-heading"><strong>Prof. (Mrs.) I. J. Dayawansa</strong>   <i>Patron, E-Club</i></div>
+          <div class="panel-body">
+                Email 	:  indra@ent.mrt.ac.lk<br>
+                Tel 	: +94-11-2650634, 2650635, 2650636, 2650638<br>
+                Extension: 3309<br>
+          </div>
+        </div>
+  
+        <div class="panel panel-default col-sm-offset-2 col-md-8">
+          <div class="panel-heading"><strong>Pradeep Sanjeewa</strong>   <i>President, E-Club</i></div>
+          <div class="panel-body">
+                Email: gpsanjeewaa@gmail.com<br>
+                Mobile: +94 718 672 130<br>
+          </div>
+        </div>
+    
+        <div class="panel panel-default col-sm-offset-2 col-md-8">
+          <div class="panel-heading"><strong>Nadee Seneviratne</strong>   <i>Secretary, E-Club</i></div>
+          <div class="panel-body">
+                Email: nadeeseneviratne@gmail.com<br>
+                Mobile: +94 718 576 528<br>
+          </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sign In Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" id="signInForm">
+  <div class="modal-dialog modal-md">
+    <h4 class="modal-title form-title">Sign In</h4>
+    <div class="modal-content">
+      <form role="form" class="col-sm-offset-1 col-sm-8 form-content">
+        <br>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+          <p class="help-block">Example block-level help text here.</p>
+        </div>
+        <div class="checkbox">
+          <label>
+          <input type="checkbox"> Check me out
+          </label>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- JQuery need to be added before bootstrap -->
+<script type="text/javascript" src="resources/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+<script type="text/javascript" src="resources/js/my.js"></script>
  </body>
