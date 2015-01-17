@@ -1,3 +1,28 @@
+@font-face {
+    font-family: sinhala_font;
+    src: url("../fonts/sinhala_font.ttf");
+}
+
+.sinhala {
+    font-family: sinhala_font;
+    font-size: 200%;
+    padding-top: -20em;
+}
+
+.sinhala_heading{
+    font-family: sinhala_font;
+    font-size: 350%;
+    margin-bottom: -30px;
+}
+
+.logo{
+    background: url("http://ec.l.thumbs.canstockphoto.com/canstock13613826.jpg");
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-left: 5em;
+    padding-top: -5em;
+}
+
 .jumbo-bg {
     background-image: url("../images/jumbo.jpg");
     background-repeat: no-repeat;

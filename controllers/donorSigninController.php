@@ -18,12 +18,14 @@
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "select * from donors where email='".$email."' and pwd='".$password."'";
+        $sql = "select name from donors where email='".$email."'";
         $result = $conn->query($sql);
         if($result->num_rows == 0){
             echo "Error: Invalid Login";
         }else{
-            echo "Success: $email";
+            $result->data_seek(0);
+            $arr = $result->fetch_assoc();
+            echo "Success: ".$arr['pwd']." ".$arr['name'];
         }            
         
         $conn->close();

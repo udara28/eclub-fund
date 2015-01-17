@@ -2,7 +2,7 @@
     $method = $_SERVER['REQUEST_METHOD'];
     if( $method == 'POST'){
         $email      = $_POST["email"];
-        $password   = sha1($_POST["password"]);
+        $donor_name = $_POST["name"];
         $mobile     = $_POST["mobile"];
         $designation= $_POST["designation"];
         $company    = $_POST["company"];
@@ -21,8 +21,8 @@
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "insert into donors(email,pwd,mobile,designation,company) "
-                    ."values('".$email."','".$password."','".$mobile."','".$designation."','".$company."')" ;
+        $sql = "insert into donors(name,email,mobile,designation,company) "
+                    ."values('".$donor_name."','".$email."','".$mobile."','".$designation."','".$company."')" ;
         
         if($conn->query($sql) == TRUE){
             echo "Data added successfully.";

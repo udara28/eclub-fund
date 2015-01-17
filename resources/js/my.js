@@ -1,3 +1,5 @@
+var my_session;
+
 function gotoAbout() {
     $('#navTab li:eq(1) a').tab('show');
 }
@@ -5,11 +7,19 @@ function gotoAbout() {
 function signUpAction(){
     $("#signUpModal").modal("show");
 }
+//navigation
+$("#procedureLink").click(function() {
+   $('#navTab li:eq(2) a').tab('show');
+});
 
+$("#getDonatedLink").click(function() {
+   $("#studentModal").modal('show');
+});
+//modal control
 $("#signUpForm").submit(function(){
     //$("div#signUpModalContent").html("<div><div class=\"col-sm-2 col-sm-offset-3\"><img src=\"resources/images/loader.gif\" /></div></div>")
     $.post("controllers/donorSignupController.php",{ email:   $("#InputEmail1").val(),
-                                                     password:$("#InputPassword").val(),
+                                                     name:$("#InputName").val(),
                                                      mobile:  $("#InputMobile").val(),
                                                      designation: $("#InputDesignation").val(),
                                                      company: $("#InputCompany").val()
@@ -31,7 +41,7 @@ $("#signUpForm").submit(function(){
     return false;
 });
 
-$("#signInModal").submit(function(){
+$("#studentModal").submit(function(){
     //$("div#signUpModalContent").html("<div><div class=\"col-sm-2 col-sm-offset-3\"><img src=\"resources/images/loader.gif\" /></div></div>")
     $.post("controllers/donorSigninController.php",{ email:   $("#signInEmail").val(),
                                                      password:$("#signInPassword").val()
@@ -44,9 +54,16 @@ $("#signInModal").submit(function(){
         }else{
             $("#signInModal").modal("hide");
             $("#messageModalHeading").text(":) Signed In");
-            $("#messageModalBody").text("Hello "+data.substring(9));
+            my_session = data.substring(9,49);
+            $("#messageModalBody").text("Hello "+data.substring(50));
             $("#messageModal").modal("show");
         }
     });
     return false;
+});
+
+//level selection
+$(".levelSelection").click(function(){
+    var sel = $(this).attr("tabindex");
+     $("#levelMenu").html("Level "+sel+" <span class=\"caret\"></span>");
 });

@@ -1,19 +1,19 @@
 <!DOCTYPE HTML>
 <head>
-<title>E club fund</title>
+<title>Athwala</title>
 <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" >
 <link rel="stylesheet" href="resources/css/my.css" type="text/css" >
 </head>
 
  <body>
-<div class="col-md-4">
-    <h1>CLUB FUND</h1>    
+<div class="col-md-4 logo">
+    <h1 class="sinhala_heading">w;(je,</h1>    
 </div>
 
 <div class="col-md-7">
-    <button class="btn pull-right" data-toggle="modal" data-target="#signUpModal">Sign Up</button>
+    <button class="btn pull-right" data-toggle="modal" data-target="#studentModal">Get Donated</button>
     <p class="spacer pull-right"> . </p>
-    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#signInModal">Sign In</button>
+    <button class="btn btn-info pull-right" data-toggle="modal" data-target="#signUpModal">Become Donor</button>
 </div>
 
 <!-- navigation tabs -->
@@ -35,7 +35,7 @@
           <div class="container jumbo-content">
             <h1>Light a candle!</h1>
             <h5>
-              "E-Club fund" is a scholarship scheme initiated by the Electronic Club<br>
+              <span class="sinhala">w;(je,</span> is a scholarship scheme initiated by the Electronic Club<br>
               of the Department of Electronic and Telecommunication Engineering of University Moratuwa<br>
               with the intention of providing financial aids exclusively for the department undergraduates who are in need.
             </h5>
@@ -60,9 +60,8 @@ This brings out another perspective for the brotherhood of the ENTC family by en
           </li>
           <li class="well">
             <strong>
-              The E-Club warmly welcome all the generous hearts of ENTC Alumni to join with <Fund Name>
-Please fill the form below if you’d like to become a benefactor.
-The E-Club will get you in contact with a student after the selection process.
+              The E-Club warmly welcome all the generous hearts of ENTC Alumni to join with <span class="sinhala">w;(je,</span><br>
+              <a id=procedureLink href="#">Please read throgh the procedure for getting involved.</a>
             </strong>
           </li>
       </ul>
@@ -71,11 +70,43 @@ The E-Club will get you in contact with a student after the selection process.
   <!-- Procedure tab -->
       <br>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingZero">
+              <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                <strong>Donor : </strong>Getting involved
+                </a>
+              </h4>
+            </div>
+          <div id="collapseZero" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+              Thank you very much for taking an interest in becomming a donor. It is you who can make this project a success by helping our brothers/sisters to overcome their financial barriers. For registration please fill the form uner 
+              <a id="becomeDonor" href="#">Become Donor</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Donor : </strong>Sending donation
+            </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+        The benefactor agrees to pay the amount of Rs. 3000/= per each month for a period of one year. After that, he/she can continue with the payment or discontinue.
+The scholarship amounts will be directly deposited to the students account. Monthly reviews will be conducted check whether the process is conducted smoothly.
+            </div>
+          </div>
+        </div>
+
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingOne">
             <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Eligibility Criteria
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <strong>Student : </strong> Eligibility Criteria
               </a>
             </h4>
           </div>
@@ -89,7 +120,7 @@ The E-Club will get you in contact with a student after the selection process.
         <div class="panel-heading" role="tab" id="headingTwo">
           <h4 class="panel-title">
             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Selection Criteria
+              <strong>Student : </strong>Selection Criteria
             </a>
           </h4>
         </div>
@@ -97,7 +128,7 @@ The E-Club will get you in contact with a student after the selection process.
           <div class="panel-body">
             <ul>
               <li>
-                Please fill the application through Sign Up
+                Students who wish to apply for the scolarship please fill the application uner <a id="getDonatedLink" href="#">Get Donated</a>
               </li>
               <li>
                 The applications will be reviewed by the selection committee which consists of the Head of the Department of ENTC, Patron of the E-Club, Senior Treasurer of the E-Club and representatives from E-Club
@@ -118,21 +149,7 @@ The E-Club will get you in contact with a student after the selection process.
           </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Donation
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        The benefactor agrees to pay the amount of Rs. 3000/= per each month for a period of one year. After that, he/she can continue with the payment or discontinue.
-The scholarship amounts will be directly deposited to the students account. Monthly reviews will be conducted check whether the process is conducted smoothly.
-      </div>
-    </div>
-  </div>
+
 </div>
   </div>
   <div role="tabpanel" class="tab-pane fade" id="contact">
@@ -166,7 +183,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
 </div>
 
 <!-- Sign In Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" id="signInModal">
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" id="studentModal">
   <div class="modal-dialog modal-md">
     <div class="modal-header form-header">
       <h3 class="modal-title form-title">Sign In</h3>
@@ -176,13 +193,48 @@ The scholarship amounts will be directly deposited to the students account. Mont
       <form role="form" class="col-sm-offset-1 col-sm-8 form-content">
         <br>
         <div class="form-group">
+          <label for="exampleName">Name</label>
+          <input type="text" class="form-control" id="studentName" placeholder="Enter Name">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="signInEmail" placeholder="Enter email">
+          <input type="email" class="form-control" id="studentEmail" placeholder="Enter email">
+          <label for="exampleAddress">Residential address</label>
+          <input type="text" class="form-control" id="studentAddress" placeholder="Enter address">
+      <label for="exampleContactNo">Contact Number</label>
+          <input type="text" class="form-control" id="studentContact" placeholder="Enter contact number">
+        </div>        
+        <div class="form-group">
+
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="signInPassword" placeholder="Password">
+  
         </div>
+        <div class="form-group">
+    
+        </div>        
+        <div class="controls form-group form-inline">
+          <label for="exampleStudentInfo">Student registration</label><br>
+          <div class="dropdown form-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="levelMenu" data-toggle="dropdown" aria-expanded="true">
+            Level 1 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="levelMenu">
+              <li role="presentation"><a role="menuitem" tabindex="1" href="#" class="levelSelection">Level 1</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="2" href="#" class="levelSelection">Level 2</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="3" href="#" class="levelSelection">Level 3</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="4" href="#" class="levelSelection">Level 4</a></li>
+            </ul>
+          </div>
+          <input type="text" class="form-control" id="studentIndex" placeholder="Enter index no." />
+        </div>
+        <div class="form-group">
+          <label for="exampleParentIncome">Annual income of parents</label>
+          <input type="text" class="form-control" id="studentIncome" placeholder="Enter anual income of your parents">
+          <label for="totalScholorshop">Sum of other scholarships</label>
+          <input type="text" class="form-control" id="studentSchols" placeholder="(Ex: Mahapola, Sisu Udana, Dialog)"/>
+          <label for="reason">Why do you think you are suitable for the scholarship</label>      
+          <textarea rows=5 class="form-control" id="studentReason" placeholder="Explain the reasons for your application"></textarea>
+        </div>
+        <br>
         <button type="submit" class="btn btn-default">Sign In</button>
       </form>
     </div>
@@ -200,12 +252,12 @@ The scholarship amounts will be directly deposited to the students account. Mont
       <form role="form" class="col-sm-offset-1 col-sm-8 form-content" id="signUpForm">
         <br>
         <div class="form-group">
+          <label for="exampleInputName">Name</label>
+          <input type="text" class="form-control" id="InputName" name="name" placeholder="Enter Name">
+        </div>        
+        <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="form-control" id="InputEmail1" name="email" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="InputPassword" name="password" placeholder="Enter Password">
         </div>
         <div>
           <label for="inputMobile">Mobile no.</label>
