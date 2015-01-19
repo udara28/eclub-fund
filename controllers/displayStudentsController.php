@@ -14,7 +14,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
     
-    $sql = "select name,email,mobile,designation,company from donors";
+    $sql = "select name,email,address,contact,level,uni_index,income,schols,reason from students";
     $result = $conn->query($sql);
     
     //setting the style .css files
@@ -26,8 +26,8 @@
     
     //title setting up
     echo
-    "<h1>List of Donors</h1>" .
-    "<p> Total number of donors : " .
+    "<h1>List of Students</h1>" .
+    "<p> Total number of students : " .
     $result->num_rows .
     "</p>";
     
@@ -38,9 +38,13 @@
     "<th>#</th>".
     "<th>Name</th>".
     "<th>Email</th>".
+    "<th>Address</th>".
     "<th>Contact</th>".
-    "<th>Designation</th>".
-    "<th>Company</th>";
+    "<th>Level</th>".
+    "<th>Index no</th>".
+    "<th>Parent's<br>income</th>".
+    "<th>Sum of<br>scholarships</th>".
+    "<th>Reasons for<br>application</th>";
     
     for($row_no = 0; $row_no < $result->num_rows ; $row_no++){
         echo "<tr>";

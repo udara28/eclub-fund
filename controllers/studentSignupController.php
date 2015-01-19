@@ -1,11 +1,15 @@
 <?php
     $method = $_SERVER['REQUEST_METHOD'];
     if( $method == 'POST'){
+        $name       = ">".$_POST["name"];
         $email      = ">".$_POST["email"];
-        $donor_name = ">".$_POST["name"];
-        $mobile     = ">".$_POST["mobile"];
-        $designation= ">".$_POST["designation"];
-        $company    = ">".$_POST["company"];
+        $address    = ">".$_POST["address"];
+        $contact    = ">".$_POST["contact"];
+        $level      = ">".$_POST["level"];
+        $index      = ">".$_POST["index"];
+        $income     = ">".$_POST["income"];
+        $schols     = ">".$_POST["schols"];
+        $reason     = ">".$_POST["reason"];
         
         $ini_array = parse_ini_file("../config.ini",true);
         
@@ -21,8 +25,8 @@
             die("Connection failed: " . $conn->connect_error);
         } 
         
-        $sql = "insert into donors(name,email,mobile,designation,company) "
-                    ."values('".$donor_name."','".$email."','".$mobile."','".$designation."','".$company."')" ;
+        $sql = "insert into students(name,email,address,contact,level,uni_index,income,schols,reason) "
+                    ."values('".$name."','".$email."','".$address."','".$contact."','".$level."','".$index."','".$income."','".$schols."','".$reason."')" ;
         
         if($conn->query($sql) == TRUE){
             echo "Data added successfully.";

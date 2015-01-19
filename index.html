@@ -1,8 +1,15 @@
 <!DOCTYPE HTML>
 <head>
-<title>Athwala</title>
+<title>EClub Fund </title>
+<!--
 <link rel="stylesheet" href="resources/css/bootstrap.min.css" type="text/css" >
+-->
+<link rel="stylesheet" href="resources/css/bootstrap-journal.min.css" type="text/css" >
 <link rel="stylesheet" href="resources/css/my.css" type="text/css" >
+<link rel="stylesheet" href="resources/css/parsley/parsley.css" type="text/css" >
+
+<link rel="shortcut icon" href="resources/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
 </head>
 
  <body>
@@ -17,7 +24,7 @@
 </div>
 
 <!-- navigation tabs -->
-<div role="tabpanel">
+<div role="tabpanel" class="tab-panel">
    <br><br>
    <ul class="nav nav-tabs" role="tablist" id="navTab">
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
@@ -46,9 +53,10 @@
   <div role="tabpanel" class="tab-pane fade" id="about">
   <!-- About tab -->
       <br><br>
+      <div class="panel">
       <ul>
           <li class="well">
-            E-Cllub fund is a scholarship scheme initiated by the Electronic Club of the Department of Electronic and Telecommunication Engineering of University Moratuwa with the intention of providing financial aids exclusively for the department undergraduates who are in need.
+            <span class="sinhala">w;(je,</span> fund is a scholarship scheme initiated by the Electronic Club of the Department of Electronic and Telecommunication Engineering of University Moratuwa with the intention of providing financial aids exclusively for the department undergraduates who are in need.
           </li>
           <li class="well">
             The benefactors of the funds would be the ENTC Alumni who have eagerly joined hands with the E-Club for this noble cause.
@@ -65,6 +73,7 @@ This brings out another perspective for the brotherhood of the ENTC family by en
             </strong>
           </li>
       </ul>
+      </div>
   </div>
   <div role="tabpanel" class="tab-pane fade" id="procedure">
   <!-- Procedure tab -->
@@ -73,15 +82,15 @@ This brings out another perspective for the brotherhood of the ENTC family by en
           <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingZero">
               <h4 class="panel-title">
-                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
                 <strong>Donor : </strong>Getting involved
                 </a>
               </h4>
             </div>
-          <div id="collapseZero" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div id="collapseZero" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
             <div class="panel-body">
               Thank you very much for taking an interest in becomming a donor. It is you who can make this project a success by helping our brothers/sisters to overcome their financial barriers. For registration please fill the form uner 
-              <a id="becomeDonor" href="#">Become Donor</a>
+              <a id="becomeDonorLink" href="#">Become Donor</a>
             </div>
           </div>
         </div>
@@ -110,7 +119,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
               </a>
             </h4>
           </div>
-        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
           <div class="panel-body">
             All the undergraduates who are seeking for financial aids at the Department of Electronic and Telecommunication Engineering are eligible to apply for this scholarship scheme. However the suitable students will be selected by the selection committee.
           </div>
@@ -155,7 +164,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
   <div role="tabpanel" class="tab-pane fade" id="contact">
   <!--contact us tab -->
       <br>
-        <div class="panel panel-default col-sm-offset-2 col-md-8">
+        <div class="panel panel-default">
           <div class="panel-heading"><strong>Prof. (Mrs.) I. J. Dayawansa</strong>   <i>Patron, E-Club</i></div>
           <div class="panel-body">
                 Email 	:  indra@ent.mrt.ac.lk<br>
@@ -164,7 +173,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
           </div>
         </div>
   
-        <div class="panel panel-default col-sm-offset-2 col-md-8">
+        <div class="panel panel-default">
           <div class="panel-heading"><strong>Pradeep Sanjeewa</strong>   <i>President, E-Club</i></div>
           <div class="panel-body">
                 Email: gpsanjeewaa@gmail.com<br>
@@ -172,7 +181,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
           </div>
         </div>
     
-        <div class="panel panel-default col-sm-offset-2 col-md-8">
+        <div class="panel panel-default ">
           <div class="panel-heading"><strong>Nadee Seneviratne</strong>   <i>Secretary, E-Club</i></div>
           <div class="panel-body">
                 Email: nadeeseneviratne@gmail.com<br>
@@ -182,40 +191,32 @@ The scholarship amounts will be directly deposited to the students account. Mont
   </div>
 </div>
 
-<!-- Sign In Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" id="studentModal">
+<!-- Student Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="studentModalLabel" aria-hidden="true" id="studentModal">
   <div class="modal-dialog modal-md">
     <div class="modal-header form-header">
-      <h3 class="modal-title form-title">Sign In</h3>
+      <h3 class="modal-title form-title">Student :Sign Up</h3>
       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     </div>
     <div class="modal-content">
-      <form role="form" class="col-sm-offset-1 col-sm-8 form-content">
+      <form role="form" class="col-sm-offset-1 col-sm-8 form-content" id="studentForm" data-parsley-validate>
         <br>
         <div class="form-group">
-          <label for="exampleName">Name</label>
-          <input type="text" class="form-control" id="studentName" placeholder="Enter Name">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="studentEmail" placeholder="Enter email">
+          <label for="exampleName">Name *</label>
+          <input type="text" class="form-control" id="studentName" placeholder="Enter Name" data-parsley-trigger="change" required>
+          <label for="exampleInputEmail1">Email address *</label>
+          <input type="email" class="form-control" id="studentEmail" placeholder="Enter email" data-parsley-trigger="change" required data-parsley-type="email">
+      <label for="exampleContactNo">Contact Number *</label>
+          <input type="text" class="form-control" id="studentContact" placeholder="Enter contact number" data-parsley-trigger="change" required>
           <label for="exampleAddress">Residential address</label>
           <input type="text" class="form-control" id="studentAddress" placeholder="Enter address">
-      <label for="exampleContactNo">Contact Number</label>
-          <input type="text" class="form-control" id="studentContact" placeholder="Enter contact number">
         </div>        
-        <div class="form-group">
-
-        </div>
-        <div class="form-group">
-  
-        </div>
-        <div class="form-group">
-    
-        </div>        
+        
         <div class="controls form-group form-inline">
           <label for="exampleStudentInfo">Student registration</label><br>
           <div class="dropdown form-group">
             <button class="btn btn-default dropdown-toggle" type="button" id="levelMenu" data-toggle="dropdown" aria-expanded="true">
-            Level 1 <span class="caret"></span>
+            Select <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu" aria-labelledby="levelMenu">
               <li role="presentation"><a role="menuitem" tabindex="1" href="#" class="levelSelection">Level 1</a></li>
@@ -235,7 +236,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
           <textarea rows=5 class="form-control" id="studentReason" placeholder="Explain the reasons for your application"></textarea>
         </div>
         <br>
-        <button type="submit" class="btn btn-default">Sign In</button>
+        <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>
   </div>
@@ -245,23 +246,34 @@ The scholarship amounts will be directly deposited to the students account. Mont
 <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="signInModalLabel" aria-hidden="true" id="signUpModal">
   <div class="modal-dialog modal-md form-header">
     <div class="modal-header">
-      <h3 class="modal-title" id="signUpModalTitle">Sign Up</h3>
+      <h3 class="modal-title" id="signUpModalTitle">Donor :Sign Up</h3>
       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     </div>
     <div class="modal-content" id="signUpModalContent">
-      <form role="form" class="col-sm-offset-1 col-sm-8 form-content" id="signUpForm">
+      <form role="form" class="col-sm-offset-1 col-sm-8 form-content" id="signUpForm" data-parsley-validate>
         <br>
-        <div class="form-group">
-          <label for="exampleInputName">Name</label>
-          <input type="text" class="form-control" id="InputName" name="name" placeholder="Enter Name">
+        <div class="controls form-group form-inline">
+          <label for="exampleName">Name *</label><br>
+          <div class="dropdown form-group">
+            <button class="btn btn-default dropdown-toggle" type="button" id="donorTitleMenu" data-toggle="dropdown" aria-expanded="true">
+            Select <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="titleMenu">
+              <li role="presentation"><a role="menuitem" tabindex="1" href="#" class="donorTitleSelection">Mr</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="2" href="#" class="donorTitleSelection">Mrs</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="3" href="#" class="donorTitleSelection">Miss</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="4" href="#" class="donorTitleSelection">Dr</a></li>
+            </ul>
+          </div>
+          <input type="text" class="form-control" id="InputName" placeholder="Enter name" data-parsley-trigger="change" required/>
         </div>        
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="InputEmail1" name="email" placeholder="Enter email">
+          <label for="exampleInputEmail1">Email address *</label>
+          <input type="email" class="form-control" id="InputEmail1" name="email" placeholder="Enter email" data-parsley-trigger="change" required data-parsley-type="email">
         </div>
         <div>
-          <label for="inputMobile">Mobile no.</label>
-          <input type="phone" class="form-control" id="InputMobile" name="mobile" placeholder="Enter mobile number"/>
+          <label for="inputMobile">Mobile no. *</label>
+          <input type="phone" class="form-control" id="InputMobile" name="mobile" placeholder="Enter mobile number" data-parsley-trigger="change" required/>
         </div>
         <div>
           <label for="inputDesignation">Designation</label>
@@ -272,7 +284,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
           <input type="text" class="form-control" id="InputCompany" name="company" placeholder="Enter your company"/>
         </div>
         <br>
-        <button class="btn btn-default" onClick="">Submit</button>
+        <button class="btn btn-default" type="submit" >Submit</button>
       </form>
     </div>
   </div>
@@ -293,6 +305,7 @@ The scholarship amounts will be directly deposited to the students account. Mont
 
 <!-- JQuery need to be added before bootstrap -->
 <script type="text/javascript" src="resources/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="resources/js/parsley.min.js"></script>
 <script type="text/javascript" src="resources/js/bootstrap.js"></script>
 <script type="text/javascript" src="resources/js/my.js"></script>
  </body>
