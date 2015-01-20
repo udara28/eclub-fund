@@ -12,15 +12,16 @@
 .sinhala_heading{
     font-family: sinhala_font;
     font-size: 350%;
-    margin-bottom: -30px;
+    margin-top: -0.5em;
+    margin-left: 0.5em;
 }
 
 .logo{
     background: url("/resources/images/logo.jpg");
-    background-size: 80px 60px;
+    background-size: 7em 5em;
     background-repeat: no-repeat;
     padding-left: 5em;
-    padding-top: -5em;
+    padding-top: 2em;
 }
 
 .jumbo-bg {
